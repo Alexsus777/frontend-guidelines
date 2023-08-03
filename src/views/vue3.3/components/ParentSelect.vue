@@ -1,20 +1,20 @@
 <template>
   <!-- OLD SYNTAX -->
-  <!-- <DefineModelSelect
+  <DefineModelSelect
     :model-value="modelValue"
     :options="options"
     class="w-full"
     placeholder="Select college"
     @update:modelValue="$emit('update:modelValue', $event)"
-  /> -->
+  />
 
   <!-- NEW SYNTAX -->
-  <DefineModelSelect
+  <!-- <DefineModelSelect
     v-model="modelValue"
     :options="options"
     class="w-full"
     placeholder="Select college"
-  />
+  /> -->
 </template>
 
 <script lang="ts" setup>
@@ -28,12 +28,12 @@ const options = [
 ]
 
 // OLD SYNTAX
-// defineProps<{
-//   modelValue: string | null
-// }>()
+defineProps<{
+  modelValue: string | null
+}>()
 
-// defineEmits(['update:modelValue'])
+defineEmits(['update:modelValue'])
 
 // NEW SYNTAX
-const modelValue = defineModel<string>({ required: true })
+// const modelValue = defineModel<string>({ required: true })
 </script>

@@ -7,3 +7,10 @@ export type TDataAttendees = {
   short_description: string
   points: string
 }
+
+export interface IUser {
+  id: number
+  name: string
+  university: string
+  age: number | string
+}

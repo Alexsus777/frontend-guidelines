@@ -3,20 +3,22 @@
     <header
       class="p-4 bg-primary text-white capitalize shadow flex items-center" data-testid="page-header"
     >
-      <div class="w-40 mr-10">
+      <div class="w-40 mr-10 shrink-0">
         <img src="/images/logo.png" alt="logo">
       </div>
 
-      <el-button
-        v-for="nav in navigation"
-        :key="nav.name"
-        :type="$elComponentType.primary"
-        plain
-        class="hover:underline capitalize"
-        @click="$router.push({ name: nav.name })"
-      >
-        {{ nav.label }}
-      </el-button>
+      <div class="flex flex-wrap gap-y-3">
+        <el-button
+          v-for="nav in navigation"
+          :key="nav.name"
+          :type="$elComponentType.primary"
+          plain
+          class="hover:underline capitalize"
+          @click="$router.push({ name: nav.name })"
+        >
+          {{ nav.label }}
+        </el-button>
+      </div>
     </header>
 
     <div class="flex-grow overflow-auto">

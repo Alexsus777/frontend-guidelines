@@ -2,7 +2,6 @@
   <button
     :class="['button', buttonClass]"
     :type="nativeType"
-    @click="$emit('click', 'Button clicked', 42, { foo: 'bar' })"
   >
     <slot />
   </button>
@@ -12,8 +11,6 @@
 import type { ButtonHTMLAttributes } from 'vue'
 
 const { $buttonSize, $buttonType } = useGlobalProperties()
-
-defineEmits(['click'])
 
 const props = withDefaults(defineProps<{
   type: keyof typeof $buttonType

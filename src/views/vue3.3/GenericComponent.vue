@@ -3,25 +3,18 @@
     <h1 class="text-center py-5 font-bold text-2xl text-primary">Generic Component</h1>
     <GenericCmp :items="users">
       <template #default="{ item }">
-        <div>
-          <p class="font-semibold">
-            {{ item.name }}
-          </p>
-          <p class="font-medium">{{ item.university }}</p>
-          <p>{{ item.age }}</p>
-        </div>
+        <p class="font-semibold">
+          {{ item.name }}
+        </p>
+        <p class="font-medium">{{ item.university }}</p>
+        <p>{{ item.age }}</p>
       </template>
     </GenericCmp>
   </div>
 </template>
 
 <script lang="ts" setup>
-interface IUser {
-  id: number
-  name: string
-  university: string
-  age: number | string
-}
+import type { IUser } from './vue.3.3'
 
 const users = ref<IUser[]>([
   { id: 1, name: 'Andrew', university: 'Massachusetts Institute of Technology (MIT), USA', age: 27 },

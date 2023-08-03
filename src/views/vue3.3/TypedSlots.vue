@@ -3,7 +3,9 @@
     <h1 class="text-center py-5 font-bold text-2xl text-primary">Typed Slots with defineSlots</h1>
     <SetSlots>
       <template #default="{ msg }">
-        {{ msg }}
+        <p class="font-bold text-gray-800">
+          {{ msg }}
+        </p>
       </template>
     </SetSlots>
     <!-- <SetSlots>
